@@ -1,99 +1,163 @@
-const translations = {
-  en: {
-    title: "Software Engineer & Technical Leader",
-    heroText:
-      "I build and lead real-world software solutions that solve complex business problems, with strong focus on maintainability, scalability, and long-term impact.",
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jackson Ricardo Wippel | Software Engineer & Technical Leader</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    githubBtn: "GitHub",
-    featuredBtn: "Featured Project",
+  <!-- HERO -->
+  <header class="hero">
 
-    aboutTitle: "About Me",
-    aboutP1:
-      "I am a software engineer and technical leader with strong experience in enterprise systems and business-critical applications.",
-    aboutP2:
-      "I have worked on systems that support financial decisions, operational control, and long-term product evolution, translating complex business requirements into reliable and maintainable software solutions.",
-    aboutP3:
-      "My focus is on providing clear technical direction while building systems that deliver measurable business value.",
+    <!-- LANGUAGE SWITCH -->
+    <div class="language-switch">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('pt')">PT</button>
+    </div>
 
-    featuredTitle: "Featured Project",
-    projectP1:
-      "A web-based system actively used by a real law firm to track lawyers' working hours, support accurate client billing, and provide full visibility into how the firm's time and resources are allocated.",
-    projectP2:
-      "The system helps identify profitability issues, supports monthly billing processes, and enables data-driven decisions regarding fixed-fee and hourly-based clients.",
-    projectP3:
-      "Built with ASP.NET MVC, SQL Server, and hosted on Microsoft Azure, focusing on long-term maintainability and real production needs.",
+    <div class="container">
+      <h1>Jackson Ricardo Wippel</h1>
 
-    viewRepo: "View Repository",
+      <h2 data-i18n="title">
+        Software Engineer & Technical Leader
+      </h2>
 
-    screenshotsTitle: "System Screenshots",
-    shot1:
-      "Dashboard providing visibility into time allocation and productivity",
-    shot2:
-      "Time tracking per lawyer, client, and activity",
-    shot3:
-      "Reports supporting accurate billing and financial decisions",
+      <p data-i18n="heroText">
+        I build and lead real-world software solutions that solve complex
+        business problems, with strong focus on maintainability,
+        scalability, and long-term impact.
+      </p>
 
-    techTitle: "Technologies & Focus",
-    techFocus:
-      "Focus areas include business-driven development, maintainable architectures, cloud-based solutions, and systems designed for real production environments."
-  },
+      <div class="buttons">
+        <a href="https://github.com/jrwippel"
+           target="_blank"
+           class="btn primary"
+           data-i18n="githubBtn">
+          GitHub
+        </a>
 
-  pt: {
-    title: "Engenheiro de Software & Líder Técnico",
-    heroText:
-      "Desenvolvo e lidero soluções de software reais para resolver problemas complexos de negócio, com forte foco em manutenibilidade, escalabilidade e impacto de longo prazo.",
+        <a href="https://github.com/jrwippel/law-firm-time-tracking"
+           target="_blank"
+           class="btn secondary"
+           data-i18n="featuredBtn">
+          Featured Project
+        </a>
+      </div>
+    </div>
+  </header>
 
-    githubBtn: "GitHub",
-    featuredBtn: "Projeto em Destaque",
+  <!-- ABOUT -->
+  <section class="section">
+    <div class="container">
+      <h3 data-i18n="aboutTitle">About Me</h3>
 
-    aboutTitle: "Sobre Mim",
-    aboutP1:
-      "Sou engenheiro de software e líder técnico com forte experiência em sistemas corporativos e aplicações críticas para o negócio.",
-    aboutP2:
-      "Atuei em sistemas que suportam decisões financeiras, controle operacional e evolução de produtos no longo prazo, traduzindo requisitos complexos de negócio em soluções confiáveis e manuteníveis.",
-    aboutP3:
-      "Meu foco é fornecer direcionamento técnico claro enquanto construo sistemas que entregam valor real ao negócio.",
+      <p data-i18n="aboutP1">
+        Software engineer and technical leader with experience in
+        enterprise and business-critical systems.
+      </p>
 
-    featuredTitle: "Projeto em Destaque",
-    projectP1:
-      "Sistema web utilizado em produção por um escritório de advocacia para registrar horas de trabalho, apoiar a cobrança precisa de clientes e oferecer visibilidade total sobre o uso do tempo e recursos.",
-    projectP2:
-      "O sistema ajuda a identificar problemas de rentabilidade, apoia o fechamento mensal e permite decisões orientadas por dados sobre clientes mensalistas e por hora.",
-    projectP3:
-      "Desenvolvido com ASP.NET MVC, SQL Server e hospedado no Microsoft Azure, com foco em manutenibilidade de longo prazo e necessidades reais de produção.",
+      <p data-i18n="aboutP2">
+        Strong focus on transforming real business needs into reliable,
+        maintainable, and scalable software solutions.
+      </p>
 
-    viewRepo: "Ver Repositório",
+      <p data-i18n="aboutP3">
+        Continuous learning, solid engineering practices, and
+        long-term system sustainability guide my work.
+      </p>
+    </div>
+  </section>
 
-    screenshotsTitle: "Capturas do Sistema",
-    shot1:
-      "Dashboard com visibilidade sobre alocação de tempo e produtividade",
-    shot2:
-      "Registro de horas por advogado, cliente e atividade",
-    shot3:
-      "Relatórios que suportam cobrança precisa e decisões financeiras",
+  <!-- PROJECT 1 -->
+  <section class="section alt">
+    <div class="container">
+      <h3 data-i18n="featuredTitle1">Featured Project</h3>
+      <h4>Law Firm Time Tracking System</h4>
 
-    techTitle: "Tecnologias & Foco",
-    techFocus:
-      "Áreas de foco incluem desenvolvimento orientado ao negócio, arquiteturas manuteníveis, soluções em nuvem e sistemas projetados para ambientes reais de produção."
-  }
-};
+      <p data-i18n="lawProjectP1">
+        Web system created to centralize time tracking and support
+        accurate billing in a real law firm environment.
+      </p>
 
-function setLanguage(lang) {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
+      <p data-i18n="lawProjectP2">
+        Replaced decentralized spreadsheets with a reliable system,
+        reducing operational risk and improving financial visibility.
+      </p>
 
-    // ✅ Fallback seguro
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
+      <p data-i18n="lawProjectP3">
+        Built with ASP.NET MVC, SQL Server and hosted on Microsoft Azure,
+        focusing on maintainability and production-grade reliability.
+      </p>
 
-  localStorage.setItem("lang", lang);
-  document.documentElement.lang = lang;
-}
+      <a href="https://github.com/jrwippel/law-firm-time-tracking"
+         target="_blank"
+         class="btn primary"
+         data-i18n="viewRepo">
+        View Repository
+      </a>
+    </div>
+  </section>
 
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("lang");
-  const defaultLang = savedLang && translations[savedLang] ? savedLang : "en";
-  setLanguage(defaultLang);
-});
+  <!-- PROJECT 2 -->
+  <section class="section">
+    <div class="container">
+      <h3 data-i18n="featuredTitle2">Featured Project</h3>
+      <h4>Vehicle Transfer Management System</h4>
+
+      <p data-i18n="vehicleProjectP1">
+        Web system designed to manage vehicle transfer operations with
+        traceability and operational control.
+      </p>
+
+      <p data-i18n="vehicleProjectP2">
+        Covers the full lifecycle including checklists, photo capture,
+        digital signatures, and automated reporting.
+      </p>
+
+      <p data-i18n="vehicleProjectP3">
+        Built with ASP.NET MVC, SQL Server, Azure Blob Storage and hosted
+        on Microsoft Azure, supporting image-heavy workflows.
+      </p>
+
+      <a href="https://github.com/jrwippel/WebAppSystemsTransp"
+         target="_blank"
+         class="btn primary"
+         data-i18n="viewRepo">
+        View Repository
+      </a>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGIES -->
+  <section class="section alt">
+    <div class="container">
+      <h3 data-i18n="techTitle">Technologies & Focus</h3>
+
+      <ul class="skills">
+        <li>C# / .NET (ASP.NET MVC)</li>
+        <li>SQL Server</li>
+        <li>Microsoft Azure</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Git & GitHub</li>
+      </ul>
+
+      <p class="focus" data-i18n="techFocus">
+        Engineering-driven development focused on solving real problems,
+        not just adopting technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 — Jackson Ricardo Wippel |
+      <a href="https://github.com/jrwippel" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+  <script src="i18n.js"></script>
+</body>
+</html>
