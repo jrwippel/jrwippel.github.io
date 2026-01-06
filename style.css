@@ -17,7 +17,9 @@ body {
   padding: 0 20px;
 }
 
+/* HERO */
 .hero {
+  position: relative;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: #fff;
   padding: 80px 0;
@@ -40,6 +42,30 @@ body {
   font-size: 1.1rem;
 }
 
+/* LANGUAGE SWITCH */
+.language-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.language-switch button {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.language-switch button:hover {
+  background: #ffcc00;
+}
+
+/* BUTTONS */
 .buttons {
   display: flex;
   justify-content: center;
@@ -53,8 +79,8 @@ body {
   border-radius: 4px;
   font-weight: 500;
   margin-top: 20px;
+  transition: all 0.2s ease;
 }
-
 
 .btn.primary {
   background: #ffcc00;
@@ -66,6 +92,12 @@ body {
   color: #fff;
 }
 
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* SECTIONS */
 .section {
   padding: 60px 0;
 }
@@ -84,6 +116,7 @@ body {
   margin-bottom: 10px;
 }
 
+/* SKILLS */
 .skills {
   list-style: none;
   display: grid;
@@ -99,23 +132,12 @@ body {
   text-align: center;
 }
 
-.focus {
-  margin-top: 20px;
-  font-style: italic;
+.skills li:hover {
+  background: #d5dbdb;
+  transition: background 0.3s;
 }
 
-footer {
-  background: #2c3e50;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-footer a {
-  color: #ffcc00;
-  text-decoration: none;
-}
-
+/* SCREENSHOTS */
 .screenshots {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -136,13 +158,20 @@ footer a {
   text-align: center;
 }
 
-.btn:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-  transition: all 0.2s ease;
+/* FOOTER */
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
 }
 
-.skills li:hover {
-  background: #d5dbdb;
-  transition: background 0.3s;
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.focus {
+  margin-top: 20px;
+  font-style: italic;
 }
