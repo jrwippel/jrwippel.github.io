@@ -82,8 +82,9 @@ function setLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
 
-    if (translations[lang][key]) {
-      el.innerText = translations[lang][key];
+    // ✅ Fallback seguro
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
     }
   });
 
@@ -92,6 +93,7 @@ function setLanguage(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const lang = localStorage.getItem("lang") || "en";
-  setLanguage(lang);
+  const savedLang = localStorage.getItem("lang");
+  const defaultLang = savedLang && translations[savedLang] ? savedLang : "en";
+  setLanguage(defaultLang);
 });
