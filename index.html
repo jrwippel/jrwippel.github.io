@@ -8,24 +8,39 @@
 </head>
 <body>
 
+  <!-- LANGUAGE SWITCH -->
+  <div style="position: absolute; top: 20px; right: 20px; z-index: 10;">
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('pt')">PT</button>
+  </div>
+
   <!-- HERO -->
   <header class="hero">
     <div class="container">
       <h1>Jackson Wippel</h1>
-      <h2>Software Engineer & Technical Leader</h2>
-      <p>
+
+      <h2 data-i18n="title">
+        Software Engineer & Technical Leader
+      </h2>
+
+      <p data-i18n="heroText">
         I build and lead real-world software solutions that solve
         complex business problems, with strong focus on
         maintainability, scalability, and long-term impact.
       </p>
 
       <div class="buttons">
-        <a href="https://github.com/jrwippel" target="_blank" class="btn primary">
+        <a href="https://github.com/jrwippel"
+           target="_blank"
+           class="btn primary"
+           data-i18n="githubBtn">
           GitHub
         </a>
+
         <a href="https://github.com/jrwippel/law-firm-time-tracking"
            target="_blank"
-           class="btn secondary">
+           class="btn secondary"
+           data-i18n="featuredBtn">
           Featured Project
         </a>
       </div>
@@ -35,22 +50,22 @@
   <!-- ABOUT ME -->
   <section class="section">
     <div class="container">
-      <h3>About Me</h3>
+      <h3 data-i18n="aboutTitle">About Me</h3>
 
-      <p>
+      <p data-i18n="aboutP1">
         I am a software engineer and technical leader with strong
         experience in enterprise systems and business-critical
         applications.
       </p>
 
-      <p>
+      <p data-i18n="aboutP2">
         I have worked on systems that support financial decisions,
         operational control, and long-term product evolution,
         translating complex business requirements into reliable
         and maintainable software solutions.
       </p>
 
-      <p>
+      <p data-i18n="aboutP3">
         My focus is on providing clear technical direction while
         building systems that deliver measurable business value.
       </p>
@@ -60,63 +75,71 @@
   <!-- FEATURED PROJECT -->
   <section class="section alt">
     <div class="container">
-      <h3>Featured Project</h3>
+      <h3 data-i18n="featuredTitle">Featured Project</h3>
+
       <h4>Law Firm Time Tracking System</h4>
 
-      <p>
+      <p data-i18n="projectP1">
         A web-based system actively used by a real law firm to track
         lawyers' working hours, support accurate client billing,
         and provide full visibility into how the firm's time and
         resources are allocated.
       </p>
 
-      <p>
+      <p data-i18n="projectP2">
         The system helps identify profitability issues, supports
         monthly billing processes, and enables data-driven decisions
         regarding fixed-fee and hourly-based clients.
       </p>
 
-      <p>
+      <p data-i18n="projectP3">
         Built with ASP.NET MVC, SQL Server, and hosted on Microsoft Azure,
         focusing on long-term maintainability and real production needs.
       </p>
 
       <a href="https://github.com/jrwippel/law-firm-time-tracking"
          target="_blank"
-         class="btn primary">
+         class="btn primary"
+         data-i18n="viewRepo">
         View Repository
       </a>
     </div>
   </section>
 
-<section class="section">
-  <div class="container">
-    <h3>System Screenshots</h3>
+  <!-- SCREENSHOTS -->
+  <section class="section">
+    <div class="container">
+      <h3 data-i18n="screenshotsTitle">System Screenshots</h3>
 
-    <div class="screenshots">
-      <figure>
-        <img src="images/dashboard.png" alt="Dashboard overview">
-        <figcaption>Dashboard providing visibility into time allocation and productivity</figcaption>
-      </figure>
+      <div class="screenshots">
+        <figure>
+          <img src="images/dashboard.png" alt="Dashboard overview">
+          <figcaption data-i18n="shot1">
+            Dashboard providing visibility into time allocation and productivity
+          </figcaption>
+        </figure>
 
-      <figure>
-        <img src="images/time-tracking.png" alt="Time tracking screen">
-        <figcaption>Time tracking per lawyer, client, and activity</figcaption>
-      </figure>
+        <figure>
+          <img src="images/time-tracking.png" alt="Time tracking screen">
+          <figcaption data-i18n="shot2">
+            Time tracking per lawyer, client, and activity
+          </figcaption>
+        </figure>
 
-      <figure>
-        <img src="images/reports.png" alt="Monthly reports">
-        <figcaption>Reports supporting accurate billing and financial decisions</figcaption>
-      </figure>
+        <figure>
+          <img src="images/reports.png" alt="Monthly reports">
+          <figcaption data-i18n="shot3">
+            Reports supporting accurate billing and financial decisions
+          </figcaption>
+        </figure>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- TECHNOLOGIES -->
   <section class="section">
     <div class="container">
-      <h3>Technologies & Focus</h3>
+      <h3 data-i18n="techTitle">Technologies & Focus</h3>
 
       <ul class="skills">
         <li>C# / .NET (ASP.NET MVC)</li>
@@ -126,7 +149,7 @@
         <li>Git & GitHub</li>
       </ul>
 
-      <p class="focus">
+      <p class="focus" data-i18n="techFocus">
         Focus areas include business-driven development,
         maintainable architectures, cloud-based solutions,
         and systems designed for real production environments.
@@ -141,6 +164,9 @@
       <a href="https://github.com/jrwippel" target="_blank">GitHub</a>
     </p>
   </footer>
+
+  <!-- I18N SCRIPT -->
+  <script src="i18n.js"></script>
 
 </body>
 </html>

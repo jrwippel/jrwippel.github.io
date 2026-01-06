@@ -135,3 +135,14 @@ footer a {
   color: #555;
   text-align: center;
 }
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+.skills li:hover {
+  background: #d5dbdb;
+  transition: background 0.3s;
+}
