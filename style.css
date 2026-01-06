@@ -47,11 +47,14 @@ body {
 }
 
 .btn {
+  display: inline-block;
   text-decoration: none;
   padding: 12px 25px;
   border-radius: 4px;
   font-weight: 500;
+  margin-top: 20px;
 }
+
 
 .btn.primary {
   background: #ffcc00;
