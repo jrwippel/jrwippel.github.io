@@ -1,5 +1,9 @@
 const translations = {
   en: {
+expYears: "Years of Experience",
+expStudents: "Udemy Students",
+certPsm: "Professional Scrum Master I",
+certDevops: "DevOps Certified",
     title: "Software Engineer & Technical Leader",
     heroText: "I build and lead real-world software solutions that solve complex business problems, with strong focus on maintainability, scalability, and long-term impact.",
     aboutTitle: "About Me",
@@ -38,6 +42,10 @@ const translations = {
     techFocus: "Focus areas include business-driven development, maintainable architectures, cloud-based solutions, and systems designed for real production environments."
   },
   pt: {
+expYears: "Anos de Experiência",
+expStudents: "Alunos na Udemy",
+certPsm: "Professional Scrum Master I",
+certDevops: "Certificação DevOps",
     title: "Engenheiro de Software & Líder Técnico",
     heroText: "Desenvolvo e lidero soluções de software aplicadas a problemas reais de negócio, com forte foco em manutenibilidade, escalabilidade e impacto de longo prazo.",
     aboutTitle: "Sobre Mim",
