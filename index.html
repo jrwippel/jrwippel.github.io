@@ -4,14 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jackson Ricardo Wippel | Software Engineer & Technical Leader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HERO -->
   <header class="hero">
-
-    <!-- LANGUAGE SWITCH -->
     <div class="language-switch">
       <button onclick="setLanguage('en')">EN</button>
       <button onclick="setLanguage('pt')">PT</button>
@@ -19,188 +17,83 @@
 
     <div class="container">
       <h1>Jackson Wippel</h1>
-
       <h2 data-i18n="title">Software Engineer & Technical Leader</h2>
 
       <p data-i18n="heroText">
-        I build and lead real-world software solutions that solve
-        complex business problems, with strong focus on
-        maintainability, scalability, and long-term impact.
+        I build and lead real-world software solutions that solve complex business problems, with strong focus on maintainability, scalability, and long-term impact.
       </p>
 
       <div class="buttons">
-        <a href="https://github.com/jrwippel"
-           target="_blank"
-           class="btn primary"
-           data-i18n="githubBtn">
-          GitHub
-        </a>
-
-        <a href="https://github.com/jrwippel/law-firm-time-tracking"
-           target="_blank"
-           class="btn secondary"
-           data-i18n="featuredBtn">
-          Featured Project
-        </a>
+        <a href="https://github.com/jrwippel" target="_blank" class="btn primary" data-i18n="githubBtn">GitHub</a>
+        <a href="https://github.com/jrwippel/law-firm-time-tracking" target="_blank" class="btn secondary" data-i18n="featuredBtn">Featured Project</a>
       </div>
     </div>
   </header>
 
-  <!-- ABOUT ME -->
-  <section class="section">
-    <div class="container">
+  <main class="container">
+    <section class="section">
       <h3 data-i18n="aboutTitle">About Me</h3>
-
-      <p data-i18n="aboutP1">
-        I am a software engineer and technical leader with strong
-        experience in enterprise systems and business-critical
-        applications.
-      </p>
-
-      <p data-i18n="aboutP2">
-        I have worked on systems that support financial decisions,
-        operational control, and long-term product evolution,
-        translating complex business requirements into reliable
-        and maintainable software solutions.
-      </p>
-
-      <p data-i18n="aboutP3">
-        My focus is on providing clear technical direction while
-        building systems that deliver measurable business value.
-      </p>
-    </div>
-  </section>
-
-  <!-- FEATURED PROJECT 1 -->
-  <section class="section alt">
-    <div class="container">
-      <h3 data-i18n="featuredTitle">Featured Project</h3>
-      <h4 data-i18n="lawProjectTitle">Law Firm Time Tracking System</h4>
-
-      <p data-i18n="projectP1">
-        A web-based system actively used by a real law firm to track
-        lawyers' working hours, support accurate client billing,
-        and provide full visibility into how the firm's time and
-        resources are allocated.
-      </p>
-
-      <p data-i18n="projectP2">
-        The system helps identify profitability issues, supports
-        monthly billing processes, and enables data-driven decisions
-        regarding fixed-fee and hourly-based clients.
-      </p>
-
-      <p data-i18n="projectP3">
-        Built with ASP.NET MVC, SQL Server, and hosted on Microsoft Azure,
-        focusing on long-term maintainability and real production needs.
-      </p>
-
-      <a href="https://github.com/jrwippel/law-firm-time-tracking"
-         target="_blank"
-         class="btn primary"
-         data-i18n="viewRepo">
-        View Repository
-      </a>
-    </div>
-  </section>
-
-  <!-- SCREENSHOTS PROJECT 1 -->
-  <section class="section">
-    <div class="container">
-      <h3 data-i18n="screenshotsTitle">System Screenshots</h3>
-
-      <div class="screenshots">
-        <figure>
-          <img src="images/dashboard.png" alt="Dashboard overview">
-          <figcaption data-i18n="shot1">
-            Dashboard providing visibility into time allocation and productivity
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/time-tracking.png" alt="Time tracking screen">
-          <figcaption data-i18n="shot2">
-            Time tracking per lawyer, client, and activity
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/reports.png" alt="Monthly reports">
-          <figcaption data-i18n="shot3">
-            Reports supporting accurate billing and financial decisions
-          </figcaption>
-        </figure>
+      <div class="about-content">
+        <p data-i18n="aboutP1">I am a software engineer and technical leader with strong experience in enterprise systems and business-critical applications.</p>
+        <p data-i18n="aboutP2">I have worked on systems that support financial decisions, operational control, and long-term product evolution, translating complex business requirements into reliable and maintainable software solutions.</p>
+        <p data-i18n="aboutP3">My focus is on providing clear technical direction while building systems that deliver measurable business value.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FEATURED PROJECT 2 -->
-  <section class="section alt">
-    <div class="container">
+    <section class="section">
       <h3 data-i18n="featuredTitle">Featured Project</h3>
-      <h4 data-i18n="vehicleProjectTitle">Vehicle Transfer Management System</h4>
+      
+      <div class="project-card">
+        <h4 data-i18n="lawProjectTitle">Law Firm Time Tracking System</h4>
+        <p data-i18n="projectP1">A web-based system actively used by a real law firm to track lawyers' working hours, support accurate client billing, and provide full visibility into how the firm's time and resources are allocated.</p>
+        <p data-i18n="projectP2">The system helps identify profitability issues, supports monthly billing processes, and enables data-driven decisions regarding fixed-fee and hourly-based clients.</p>
+        <p class="tech-text" data-i18n="projectP3">Built with ASP.NET MVC, SQL Server, and hosted on Microsoft Azure, focusing on long-term maintainability and real production needs.</p>
+        
+        <a href="https://github.com/jrwippel/law-firm-time-tracking" target="_blank" class="btn outline" data-i18n="viewRepo">View Repository</a>
 
-      <p data-i18n="vehicleP1">
-        Web system designed to manage vehicle transfer operations,
-        focusing on traceability, compliance, and operational reliability.
-      </p>
-
-      <p data-i18n="vehicleP2">
-        The solution covers the full transfer lifecycle, including
-        vehicle pickup, condition checklist, photo capture, digital
-        signature, delivery confirmation, and automated report generation.
-      </p>
-
-      <p data-i18n="vehicleP3">
-        Built with ASP.NET MVC, SQL Server, and Azure Blob Storage to
-        support image-heavy workflows, hosted on Microsoft Azure with
-        focus on maintainability and real operational use.
-      </p>
-
-      <a href="https://github.com/jrwippel/vehicle-transfer-management-sample"
-         target="_blank"
-         class="btn primary"
-         data-i18n="viewRepo">
-        View Repository
-      </a>
-    </div>
-  </section>
-
-  <!-- SCREENSHOTS PROJECT 2 -->
-  <section class="section">
-    <div class="container">
-      <h3 data-i18n="screenshotsTitle">System Screenshots</h3>
-
-      <div class="screenshots">
-        <figure>
-          <img src="images/lista-pedido.png" alt="Dashboard overview">
-          <figcaption data-i18n="vehicleShot1">
-            Centralized dashboard with real-time visibility of vehicle transfer orders and their current status
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/time-tracking-vehicle.png" alt="Time tracking screen">
-          <figcaption data-i18n="vehicleShot2">
-            Vehicle and transfer management interface, enabling efficient control of fleet operations and assignments
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/detalhes-pedido.png" alt="Monthly reports">
-          <figcaption data-i18n="vehicleShot3">
-            Detailed order view with complete information for tracking, planning, and operational decision-making
-          </figcaption>
-        </figure>
+        <div class="screenshots">
+          <figure>
+            <img src="images/dashboard.png" alt="Dashboard">
+            <figcaption data-i18n="shot1">Dashboard providing visibility into time allocation and productivity</figcaption>
+          </figure>
+          <figure>
+            <img src="images/time-tracking.png" alt="Time tracking">
+            <figcaption data-i18n="shot2">Time tracking per lawyer, client, and activity</figcaption>
+          </figure>
+          <figure>
+            <img src="images/reports.png" alt="Reports">
+            <figcaption data-i18n="shot3">Reports supporting accurate billing and financial decisions</figcaption>
+          </figure>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- TECHNOLOGIES -->
-  <section class="section">
-    <div class="container">
+      <div class="project-card">
+        <h4 data-i18n="vehicleProjectTitle">Vehicle Transfer Management System</h4>
+        <p data-i18n="vehicleP1">Web system designed to manage vehicle transfer operations, focusing on traceability, compliance, and operational reliability.</p>
+        <p data-i18n="vehicleP2">The solution covers the full transfer lifecycle, including vehicle pickup, condition checklist, photo capture, digital signature, delivery confirmation, and automated report generation.</p>
+        <p class="tech-text" data-i18n="vehicleP3">Built with ASP.NET MVC, SQL Server, and Azure Blob Storage to support image-heavy workflows, hosted on Microsoft Azure with focus on maintainability and real operational use.</p>
+        
+        <a href="https://github.com/jrwippel/vehicle-transfer-management-sample" target="_blank" class="btn outline" data-i18n="viewRepo">View Repository</a>
+
+        <div class="screenshots">
+          <figure>
+            <img src="images/lista-pedido.png" alt="Orders List">
+            <figcaption data-i18n="vehicleShot1">Centralized dashboard with real-time visibility of vehicle transfer orders</figcaption>
+          </figure>
+          <figure>
+            <img src="images/time-tracking-vehicle.png" alt="Management">
+            <figcaption data-i18n="vehicleShot2">Vehicle and transfer management interface, enabling efficient control of fleet operations</figcaption>
+          </figure>
+          <figure>
+            <img src="images/detalhes-pedido.png" alt="Order Details">
+            <figcaption data-i18n="vehicleShot3">Detailed order view with complete information for tracking and decision-making</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <h3 data-i18n="techTitle">Technologies & Focus</h3>
-
       <ul class="skills">
         <li>C# / .NET (ASP.NET MVC)</li>
         <li>SQL Server</li>
@@ -209,25 +102,16 @@
         <li>Git & GitHub</li>
         <li>Azure Blob Storage</li>
       </ul>
+      <p class="focus" data-i18n="techFocus">Focus areas include business-driven development, maintainable architectures, cloud-based solutions, and systems designed for real production environments.</p>
+    </section>
+  </main>
 
-      <p class="focus" data-i18n="techFocus">
-        Focus areas include business-driven development,
-        maintainable architectures, cloud-based solutions,
-        and systems designed for real production environments.
-      </p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <p>
-      © 2026 — Jackson Ricardo Wippel |
-      <a href="https://github.com/jrwippel" target="_blank">GitHub</a>
-    </p>
+    <div class="container">
+      <p>© 2026 — Jackson Ricardo Wippel | <a href="https://github.com/jrwippel" target="_blank">GitHub</a></p>
+    </div>
   </footer>
 
-  <!-- I18N SCRIPT -->
   <script src="i18n.js"></script>
-
 </body>
 </html>
