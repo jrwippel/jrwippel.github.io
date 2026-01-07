@@ -126,6 +126,33 @@ body {
   color: var(--text-muted);
 }
 
+/* Estilo para os links de redes sociais no Hero */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--accent); /* Amarelo ouro que definimos anteriormente */
+  transform: translateY(-3px);
+}
+
+/* Ajuste responsivo para ícones menores em celulares */
+@media (max-width: 600px) {
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}
+
 .focus { margin-top: 20px; font-style: italic; color: var(--text-muted); }
 
 footer { background: #0f172a; color: #94a3b8; padding: 40px 0; text-align: center; font-size: 0.9rem; }
