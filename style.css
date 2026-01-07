@@ -245,6 +245,25 @@ body {
   color: var(--text-muted);
 }
 
+/* Adicione ao final do seu style.css */
+
+.project-card.highlight {
+  border-left: 5px solid var(--accent);
+  background: linear-gradient(to right, #ffffff, #fdfdfd);
+}
+
+.badge-impact {
+  display: inline-block;
+  background: var(--accent);
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
 .focus { margin-top: 20px; font-style: italic; color: var(--text-muted); }
 
 /* FOOTER */
