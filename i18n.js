@@ -26,7 +26,12 @@ const translations = {
     vehicleShot2: "Vehicle and transfer management interface, enabling efficient control of fleet operations and assignments",
     vehicleShot3: "Detailed order view with complete information for tracking, planning, and operational decision-making",
     techTitle: "Technologies & Focus",
-    techFocus: "Focus areas include business-driven development, maintainable architectures, cloud-based solutions, and systems designed for real production environments."
+    techFocus: "Focus areas include business-driven development, maintainable architectures, cloud-based solutions, and systems designed for real production environments.", // <--- AQUI FALTAVA A VÍRGULA
+    sharingTitle: "Knowledge Sharing",
+    courseTitle: "Modern COBOL Web Development",
+    instructorBadge: "Instructor",
+    courseDesc: "A specialized course focused on modernizing legacy systems. I teach developers how to bridge the gap between Mainframe/COBOL environments and modern Web architectures, enabling digital transformation in enterprise scenarios.",
+    courseBtn: "View Course on Udemy"
   },
   pt: {
     title: "Engenheiro de Software & Líder Técnico",
@@ -55,7 +60,12 @@ const translations = {
     vehicleShot2: "Interface de gerenciamento de veículos e transferências para controle da frota",
     vehicleShot3: "Detalhes completos do pedido para rastreamento e tomada de decisões operacionais",
     techTitle: "Tecnologias & Foco",
-    techFocus: "As áreas de foco incluem desenvolvimento orientado a negócio, arquiteturas manuteníveis, soluções em nuvem e sistemas pensados para ambientes produtivos reais."
+    techFocus: "As áreas de foco incluem desenvolvimento orientado a negócio, arquiteturas manuteníveis, soluções em nuvem e sistemas pensados para ambientes produtivos reais.",
+    sharingTitle: "Compartilhamento de Conhecimento",
+    courseTitle: "Desenvolvimento COBOL Web Moderno",
+    instructorBadge: "Instrutor",
+    courseDesc: "Um curso especializado focado na modernização de sistemas legados. Ensino desenvolvedores a conectar ambientes Mainframe/COBOL com arquiteturas Web modernas, viabilizando a transformação digital em cenários corporativos.",
+    courseBtn: "Ver Curso na Udemy"
   }
 };
 
