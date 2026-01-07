@@ -16,7 +16,6 @@ const translations = {
     vehicleP2: "The solution covers the full transfer lifecycle, including vehicle pickup, condition checklist, photo capture, digital signature, delivery confirmation, and automated report generation.",
     vehicleP3: "Built with ASP.NET MVC, SQL Server, and Azure Blob Storage to support image-heavy workflows, hosted on Microsoft Azure with focus on maintainability and real operational use.",
     viewRepo: "View Repository",
-    screenshotsTitle: "System Screenshots",
     shot1: "Dashboard providing visibility into time allocation and productivity",
     shot2: "Time tracking per lawyer, client, and activity",
     shot3: "Reports supporting accurate billing and financial decisions",
@@ -29,10 +28,12 @@ const translations = {
     courseDesc: "A specialized course focused on modernizing legacy systems. I teach developers how to bridge the gap between Mainframe/COBOL environments and modern Web architectures, enabling digital transformation in enterprise scenarios.",
     courseBtn: "View Course on Udemy",
     testTitle: "Recommendations",
-    test1Text: "Jackson is an exceptional technical leader. His ability to bridge the gap between complex COBOL systems and modern cloud architectures is rare and extremely valuable.",
-    test1Role: "Senior Software Architect",
-    test2Text: "A professional focused on results and maintainability. His leadership was crucial for the digital transformation of our core systems.",
-    test2Role: "IT Director",
+    test1Text: "I recommend Jackson as an excellent professional. I could observe his commitment, technical skill, and ability to work in a team. Jackson has vast technical knowledge and always seeks efficient and creative solutions for daily challenges.",
+    test1Role: "Solution Architecture Director",
+    test2Text: "Jackson was always focused and determined in his deliveries. A professional with extensive technical knowledge and experience, he always seeks solutions and works proactively to prevent problems. He has a great relationship with people and helps whenever requested.",
+    test2Role: "Operations Manager",
+    test3Text: "Jackson has always shown himself to be a professional dedicated to work, always going beyond the proposed objectives, seeking the best for his peers and for the business itself. He demonstrates great ease in absorbing new technologies.",
+    test3Role: "Regional Service Desk Manager",
     techTitle: "Technologies & Focus",
     techFocus: "Focus areas include business-driven development, maintainable architectures, cloud-based solutions, and systems designed for real production environments."
   },
@@ -53,7 +54,6 @@ const translations = {
     vehicleP2: "A solução cobre todo o ciclo de transferência, incluindo coleta do veículo, checklist de condições, captura de fotos, assinatura digital, confirmação de entrega e geração automática de relatórios.",
     vehicleP3: "Desenvolvido em ASP.NET MVC com SQL Server e Azure Blob Storage para suportar fluxos intensivos em imagens, hospedado no Microsoft Azure com foco em manutenibilidade e uso operacional real.",
     viewRepo: "Ver Repositório",
-    screenshotsTitle: "Telas do Sistema",
     shot1: "Dashboard com visão geral da alocação de tempo e produtividade",
     shot2: "Registro de horas por advogado, cliente e atividade",
     shot3: "Relatórios que apoiam a cobrança e decisões financeiras",
@@ -63,4 +63,38 @@ const translations = {
     sharingTitle: "Compartilhamento de Conhecimento",
     courseTitle: "Desenvolvimento COBOL Web Moderno",
     instructorBadge: "Instrutor",
-    courseDesc: "Um
+    courseDesc: "Um curso especializado focado na modernização de sistemas legados. Ensino desenvolvedores a conectar ambientes Mainframe/COBOL com arquiteturas Web modernas, viabilizando a transformação digital em cenários corporativos.",
+    courseBtn: "Ver Curso na Udemy",
+    testTitle: "Recomendações",
+    test1Text: "Recomendo o Jackson como um excelente profissional em sua área de atuação. Pude observar seu comprometimento, habilidade técnica e capacidade de trabalhar em equipe. Jackson possui um vasto conhecimento técnico e sempre busca soluções eficientes e criativas para os desafios.",
+    test1Role: "Diretor de Arquitetura de Soluções",
+    test2Text: "O Jackson sempre foi uma pessoa focada e determinada nas suas entregas. Profissional com muito conhecimento técnico e experiência, busca sempre uma solução para os problemas e trabalha com muita proatividade para evitar que apareçam.",
+    test2Role: "Gerente de Operações",
+    test3Text: "Jackson sempre se mostrou um profissional dedicado ao trabalho, indo sempre além dos objetivos propostos buscando sempre o melhor para os seus companheiros e para o negócio em si. Demonstra uma grande facilidade em absorver novas tecnologias.",
+    test3Role: "Gerente Regional de Service Desk",
+    techTitle: "Tecnologias & Foco",
+    techFocus: "As áreas de foco incluem desenvolvimento orientado a negócio, arquiteturas manuteníveis, soluções em nuvem e sistemas pensados para ambientes produtivos reais."
+  }
+};
+
+function setLanguage(lang) {
+  localStorage.setItem('preferredLang', lang);
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('.language-switch button').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.textContent.toLowerCase() === lang) btn.classList.add('active');
+  });
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem('preferredLang') || "en";
+  setLanguage(savedLang);
+});
