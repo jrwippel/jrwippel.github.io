@@ -7,6 +7,28 @@
   --text-muted: #64748b;
   --header-grad: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
 }
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+}
+
+.stat-desc {
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
 
 /* ESTILO DO CURSO */
 .course-card {
