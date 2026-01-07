@@ -2,8 +2,6 @@ const translations = {
   en: {
     title: "Software Engineer & Technical Leader",
     heroText: "I build and lead real-world software solutions that solve complex business problems, with strong focus on maintainability, scalability, and long-term impact.",
-    githubBtn: "GitHub",
-    featuredBtn: "Featured Project",
     aboutTitle: "About Me",
     aboutP1: "I am a software engineer and technical leader with strong experience in enterprise systems and business-critical applications.",
     aboutP2: "I have worked on systems that support financial decisions, operational control, and long-term product evolution, translating complex business requirements into reliable and maintainable software solutions.",
@@ -22,22 +20,25 @@ const translations = {
     shot1: "Dashboard providing visibility into time allocation and productivity",
     shot2: "Time tracking per lawyer, client, and activity",
     shot3: "Reports supporting accurate billing and financial decisions",
-    vehicleShot1: "Centralized dashboard with real-time visibility of vehicle transfer orders and their current status",
-    vehicleShot2: "Vehicle and transfer management interface, enabling efficient control of fleet operations and assignments",
-    vehicleShot3: "Detailed order view with complete information for tracking, planning, and operational decision-making",
-    techTitle: "Technologies & Focus",
-    techFocus: "Focus areas include business-driven development, maintainable architectures, cloud-based solutions, and systems designed for real production environments.", // <--- AQUI FALTAVA A VÍRGULA
+    vehicleShot1: "Centralized dashboard with real-time visibility of vehicle transfer orders",
+    vehicleShot2: "Vehicle and transfer management interface, enabling efficient control of fleet operations",
+    vehicleShot3: "Detailed order view with complete information for tracking and decision-making",
     sharingTitle: "Knowledge Sharing",
     courseTitle: "Modern COBOL Web Development",
     instructorBadge: "Instructor",
     courseDesc: "A specialized course focused on modernizing legacy systems. I teach developers how to bridge the gap between Mainframe/COBOL environments and modern Web architectures, enabling digital transformation in enterprise scenarios.",
-    courseBtn: "View Course on Udemy"
+    courseBtn: "View Course on Udemy",
+    testTitle: "Recommendations",
+    test1Text: "Jackson is an exceptional technical leader. His ability to bridge the gap between complex COBOL systems and modern cloud architectures is rare and extremely valuable.",
+    test1Role: "Senior Software Architect",
+    test2Text: "A professional focused on results and maintainability. His leadership was crucial for the digital transformation of our core systems.",
+    test2Role: "IT Director",
+    techTitle: "Technologies & Focus",
+    techFocus: "Focus areas include business-driven development, maintainable architectures, cloud-based solutions, and systems designed for real production environments."
   },
   pt: {
     title: "Engenheiro de Software & Líder Técnico",
     heroText: "Desenvolvo e lidero soluções de software aplicadas a problemas reais de negócio, com forte foco em manutenibilidade, escalabilidade e impacto de longo prazo.",
-    githubBtn: "GitHub",
-    featuredBtn: "Projeto em Destaque",
     aboutTitle: "Sobre Mim",
     aboutP1: "Sou engenheiro de software e líder técnico com sólida experiência em sistemas corporativos e aplicações críticas para o negócio.",
     aboutP2: "Atuei no desenvolvimento de sistemas que suportam decisões financeiras, controle operacional e evolução contínua de produtos, transformando requisitos complexos de negócio em soluções confiáveis e sustentáveis.",
@@ -59,31 +60,7 @@ const translations = {
     vehicleShot1: "Dashboard centralizado com visibilidade em tempo real das ordens de transferência",
     vehicleShot2: "Interface de gerenciamento de veículos e transferências para controle da frota",
     vehicleShot3: "Detalhes completos do pedido para rastreamento e tomada de decisões operacionais",
-    techTitle: "Tecnologias & Foco",
-    techFocus: "As áreas de foco incluem desenvolvimento orientado a negócio, arquiteturas manuteníveis, soluções em nuvem e sistemas pensados para ambientes produtivos reais.",
     sharingTitle: "Compartilhamento de Conhecimento",
     courseTitle: "Desenvolvimento COBOL Web Moderno",
     instructorBadge: "Instrutor",
-    courseDesc: "Um curso especializado focado na modernização de sistemas legados. Ensino desenvolvedores a conectar ambientes Mainframe/COBOL com arquiteturas Web modernas, viabilizando a transformação digital em cenários corporativos.",
-    courseBtn: "Ver Curso na Udemy"
-  }
-};
-
-function setLanguage(lang) {
-  // Salva a escolha do usuário
-  localStorage.setItem('preferredLang', lang);
-  
-  // Atualiza o atributo lang do HTML para acessibilidade
-  document.documentElement.lang = lang;
-
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-}
-
-// Inicializa com o idioma salvo ou padrão (en)
-const savedLang = localStorage.getItem('preferredLang') || "en";
-setLanguage(savedLang);
+    courseDesc: "Um

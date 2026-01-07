@@ -7,6 +7,54 @@
   --text-muted: #64748b;
   --header-grad: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
 }
+/* Botão de Idioma Ativo */
+.language-switch button.active {
+  background: var(--accent) !important;
+  color: #000 !important;
+  border-color: var(--accent) !important;
+  transform: scale(1.1);
+}
+
+/* Testemunhos */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.test-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.quote-icon {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  opacity: 0.3;
+}
+
+.test-text {
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.test-author strong {
+  display: block;
+  color: var(--primary);
+}
+
+.test-author span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -203,6 +251,45 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-muted);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.test-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #ecf0f1;
+}
+
+.quote-icon {
+  color: #1e3c72;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  opacity: 0.2;
+}
+
+.test-text {
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.test-author strong {
+  display: block;
+  color: #2c3e50;
+}
+
+.test-author span {
+  font-size: 0.85rem;
+  color: #7f8c8d;
 }
 
 .focus { margin-top: 20px; font-style: italic; color: var(--text-muted); }
