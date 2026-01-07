@@ -32,6 +32,26 @@ body {
 .hero h2 { font-size: 1.5rem; font-weight: 300; color: #94a3b8; margin-bottom: 2rem; }
 .hero p { max-width: 700px; margin: 0 auto 2rem; font-size: 1.15rem; opacity: 0.9; }
 
+/* REDES SOCIAIS (Novo) */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
 /* LANGUAGE SWITCH */
 .language-switch {
   position: absolute;
@@ -56,7 +76,6 @@ body {
 .language-switch button:hover { background: var(--accent); color: #000; }
 
 /* BUTTONS */
-.buttons { display: flex; justify-content: center; gap: 1rem; }
 .btn {
   text-decoration: none;
   padding: 12px 28px;
@@ -67,7 +86,6 @@ body {
 }
 
 .btn.primary { background: var(--accent); color: #000; }
-.btn.secondary { border: 1px solid rgba(255,255,255,0.3); color: #fff; }
 .btn.outline { border: 1px solid var(--primary); color: var(--primary); margin-top: 1rem; }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
 
@@ -124,33 +142,6 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-muted);
-}
-
-/* Estilo para os links de redes sociais no Hero */
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.social-links a {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.8rem;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.social-links a:hover {
-  color: var(--accent); /* Amarelo ouro que definimos anteriormente */
-  transform: translateY(-3px);
-}
-
-/* Ajuste responsivo para ícones menores em celulares */
-@media (max-width: 600px) {
-  .social-links a {
-    font-size: 1.5rem;
-  }
 }
 
 .focus { margin-top: 20px; font-style: italic; color: var(--text-muted); }
