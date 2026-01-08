@@ -89,6 +89,14 @@ body {
   display: flex;
   gap: 8px;
 }
+.social-links a.cv-download {
+  color: #e74c3c; /* Uma cor avermelhada para lembrar o PDF, ou mantenha a cor padrão */
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px); /* Mantém o efeito de flutuar que os outros ícones devem ter */
+}
 
 .language-switch button {
   background: rgba(255, 255, 255, 0.1);
