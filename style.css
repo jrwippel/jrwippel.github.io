@@ -81,13 +81,13 @@ body {
   transform: translateY(-3px);
 }
 
-/* LANGUAGE SWITCH */
 .language-switch {
   position: absolute;
   top: 20px;
   right: 20px;
   display: flex;
-  gap: 8px;
+  gap: 10px;
+  z-index: 1000;
 }
 .social-links a.cv-download {
   color: #e74c3c; /* Uma cor avermelhada para lembrar o PDF, ou mantenha a cor padrão */
@@ -102,19 +102,24 @@ body {
 .language-switch button {
   display: flex;
   align-items: center;
-  gap: 5px; /* Espaço entre a bandeira e o texto */
+  justify-content: center;
+  gap: 6px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
-  padding: 6px 10px;
-  border-radius: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 0.85rem;
-  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem; /* Diminui o texto EN/PT */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 70px; /* Garante um tamanho fixo para não deformar */
 }
 
 .flag-icon {
-  font-size: 1.1rem; /* Tamanho da bandeira */
+  font-size: 1.2rem; /* Tamanho controlado para a bandeira não empurrar o texto */
+  line-height: 1;
 }
 
 .language-switch button:hover {
@@ -122,15 +127,11 @@ body {
   color: #000;
 }
 
-/* Destaca o botão da língua que está ativa no momento */
 .language-switch button.active {
   background: var(--accent) !important;
   color: #000 !important;
   border-color: var(--accent) !important;
-  transform: scale(1.05);
-  font-weight: bold;
 }
-
 .language-switch button span {
   font-size: 1.2rem; /* Aumenta um pouco a bandeira */
 }
