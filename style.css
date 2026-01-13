@@ -103,7 +103,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 8px; /* Espaço ideal entre bandeira e texto */
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
@@ -111,18 +111,21 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.9rem; /* Tamanho de leitura confortável */
   font-weight: 700;
   transition: all 0.3s ease;
-  min-width: 90px; /* Aumentamos para 90px para garantir espaço no PC */
-  white-space: nowrap; /* Impede que o texto pule para baixo da bandeira */
+  min-width: 95px; /* Aumentado para garantir que cabe no PC */
+  white-space: nowrap; /* REGRA DE OURO: impede a quebra de linha do texto */
 }
 
+/* Garante que a bandeira não empurre o botão */
 .flag-icon {
   font-size: 1.2rem;
   line-height: 1;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
+
 
 .language-switch button:hover {
   background: var(--accent);
