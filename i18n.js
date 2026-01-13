@@ -134,23 +134,33 @@ const translations = {
 };
 
 function setLanguage(lang) {
+  // 1. Guarda a preferência do utilizador
   localStorage.setItem('preferredLang', lang);
-  document.documentElement.lang = lang;
 
-  // Destaque visual dos botões
-  document.querySelectorAll('.language-switch button').forEach(btn => {
-    btn.classList.remove('active');
-    if (btn.textContent.toLowerCase() === lang) btn.classList.add('active');
-  });
-
-  // Tradução dos elementos
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
+  // 2. Aplica as traduções baseadas no ficheiro de tradução
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      el.innerText = translations[lang][key];
     }
   });
+
+  // 3. ATUALIZA AS BANDEIRAS: Remove a classe 'active' de todos e adiciona ao correto
+  document.querySelectorAll('.language-switch button').forEach(btn => btn.classList.remove('active'));
+  
+  if (lang === 'en') {
+    document.getElementById('btn-en').classList.add('active');
+  } else {
+    document.getElementById('btn-pt').classList.add('active');
+  }
 }
+
+// Ao carregar a página, verifica se já existe uma língua salva ou usa Português por padrão
+window.onload = () => {
+  const savedLang = localStorage.getItem('preferredLang') || 'pt';
+  setLanguage(savedLang);
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem('preferredLang') || "en";

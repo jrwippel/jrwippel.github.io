@@ -122,11 +122,17 @@ body {
   color: #000;
 }
 
+/* Destaca o botão da língua que está ativa no momento */
 .language-switch button.active {
   background: var(--accent) !important;
   color: #000 !important;
   border-color: var(--accent) !important;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  font-weight: bold;
+}
+
+.language-switch button span {
+  font-size: 1.2rem; /* Aumenta um pouco a bandeira */
 }
 
 .language-switch button:hover { background: var(--accent); color: #000; }
