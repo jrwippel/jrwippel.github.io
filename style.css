@@ -111,10 +111,11 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
-  font-size: 0.8rem; /* Diminui o texto EN/PT */
+  font-size: 0.8rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  min-width: 70px; /* Garante um tamanho fixo para não deformar */
+  min-width: 85px; /* Aumente ligeiramente de 70px para 85px para evitar quebra */
+  white-space: nowrap; /* Impede que o texto "pule" para a linha de baixo */
 }
 
 .flag-icon {
