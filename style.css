@@ -81,14 +81,49 @@ body {
   transform: translateY(-3px);
 }
 
+/* LANGUAGE SWITCH - Versão Final e Limpa */
 .language-switch {
   position: absolute;
   top: 20px;
   right: 20px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   z-index: 1000;
 }
+
+.language-switch button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 45px;  /* Tamanho fixo para garantir que seja redondo/quadrado */
+  height: 45px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0; /* Remove padding interno que possa deslocar a bandeira */
+}
+
+.language-switch button .flag-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  display: block;
+}
+
+/* Estado Ativo (Selecionado) */
+.language-switch button.active {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+.language-switch button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
 .social-links a.cv-download {
   color: #e74c3c; /* Uma cor avermelhada para lembrar o PDF, ou mantenha a cor padrão */
   font-weight: bold;
@@ -98,45 +133,6 @@ body {
   transform: translateY(-3px); /* Mantém o efeito de flutuar que os outros ícones devem ter */
 }
 
-
-.language-switch button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px; /* Espaço ideal entre bandeira e texto */
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem; /* Tamanho de leitura confortável */
-  font-weight: 700;
-  transition: all 0.3s ease;
-  min-width: 95px; /* Aumentado para garantir que cabe no PC */
-  white-space: nowrap; /* REGRA DE OURO: impede a quebra de linha do texto */
-}
-
-/* Garante que a bandeira não empurre o botão */
-.flag-icon {
-  font-size: 1.2rem;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-}
-
-
-.language-switch button:hover {
-  background: var(--accent);
-  color: #000;
-}
-
-.language-switch button.active {
-  background: var(--accent) !important;
-  color: #000 !important;
-  border-color: var(--accent) !important;
-}
 .language-switch button span {
   font-size: 1.2rem; /* Aumenta um pouco a bandeira */
 }

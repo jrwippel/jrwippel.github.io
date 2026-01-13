@@ -35,15 +35,15 @@ const translations = {
     vehicleShot1: "Centralized dashboard with real-time visibility of transfer orders",
     vehicleShot2: "Vehicle management interface for efficient fleet control",
     vehicleShot3: "Detailed order view with complete tracking information",
-	
-	//Construction Project
-	constTitle: "Construction Management & Progress System",
-	constP1: "A customized solution for a construction company to track project milestones, percentage of completion, and site photos, centralizing communication between the company and clients.",
-	constP2: "Replaced disorganized WhatsApp groups with a professional dashboard. Includes automated generation of 'PLS' reports for financial institutions to release construction funds.",
-	constP3: "Key impact: Transparency for clients and automation of bank-required technical documentation.",
-	constShot1: "Project dashboard showing individual task and overall completion %",
-	constShot2: "Site photo management and progress tracking",
-	constShot3: "Automated PLS report generation for bank financing compliance",
+    
+    // Construction Project
+    constTitle: "Construction Management & Progress System",
+    constP1: "A customized solution for a construction company to track project milestones, percentage of completion, and site photos, centralizing communication between the company and clients.",
+    constP2: "Replaced disorganized WhatsApp groups with a professional dashboard. Includes automated generation of 'PLS' reports for financial institutions to release construction funds.",
+    constP3: "Key impact: Transparency for clients and automation of bank-required technical documentation.",
+    constShot1: "Project dashboard showing individual task and overall completion %",
+    constShot2: "Site photo management and progress tracking",
+    constShot3: "Automated PLS report generation for bank financing compliance",
 
     // Knowledge Sharing (Udemy)
     sharingTitle: "Knowledge Sharing",
@@ -101,15 +101,15 @@ const translations = {
     vehicleShot1: "Dashboard centralizado com visibilidade das ordens de transferência",
     vehicleShot2: "Interface de gerenciamento para controle eficiente da frota",
     vehicleShot3: "Vista detalhada do pedido para rastreamento completo",
-	
-	// Projeto Construção
-	constTitle: "Sistema de Gestão e Acompanhamento de Obras",
-	constP1: "Solução personalizada para construtora acompanhar o percentual de evolução de cada etapa da obra, centralizando fotos e status para os clientes finais.",
-	constP2: "Substituiu a comunicação informal via WhatsApp por um sistema centralizado. Inclui a geração automática de laudos 'PLS' exigidos por bancos para liberação de recursos financeiros.",
-	constP3: "Impacto real: Transparência total para o cliente e automação de burocracia bancária crítica para o fluxo de caixa.",
-	constShot1: "Dashboard com percentual de conclusão por serviço e total da obra",
-	constShot2: "Gestão de fotos e evidências de progresso da obra",
-	constShot3: "Geração de relatório PLS para medição e liberação de financiamento",
+    
+    // Projeto Construção
+    constTitle: "Sistema de Gestão e Acompanhamento de Obras",
+    constP1: "Solução personalizada para construtora acompanhar o percentual de evolução de cada etapa da obra, centralizando fotos e status para os clientes finais.",
+    constP2: "Substituiu a comunicação informal via WhatsApp por um sistema centralizado. Inclui a geração automática de laudos 'PLS' exigidos por bancos para liberação de recursos financeiros.",
+    constP3: "Impacto real: Transparência total para o cliente e automação de burocracia bancária crítica para o fluxo de caixa.",
+    constShot1: "Dashboard com percentual de conclusão por serviço e total da obra",
+    constShot2: "Gestão de fotos e evidências de progresso da obra",
+    constShot3: "Geração de relatório PLS para medição e liberação de financiamento",
 
     // Compartilhamento (Udemy)
     sharingTitle: "Compartilhamento de Conhecimento",
@@ -134,35 +134,31 @@ const translations = {
 };
 
 function setLanguage(lang) {
-  // 1. Guarda a preferência do utilizador
   localStorage.setItem('preferredLang', lang);
 
-  // 2. Aplica as traduções baseadas no ficheiro de tradução
   const elements = document.querySelectorAll('[data-i18n]');
   elements.forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) {
+    if (translations[lang] && translations[lang][key]) {
       el.innerText = translations[lang][key];
     }
   });
 
-  // 3. ATUALIZA AS BANDEIRAS: Remove a classe 'active' de todos e adiciona ao correto
+  // Atualiza botões
   document.querySelectorAll('.language-switch button').forEach(btn => btn.classList.remove('active'));
   
-  if (lang === 'en') {
-    document.getElementById('btn-en').classList.add('active');
-  } else {
-    document.getElementById('btn-pt').classList.add('active');
+  const btnEn = document.getElementById('btn-en');
+  const btnPt = document.getElementById('btn-pt');
+
+  if (lang === 'en' && btnEn) {
+    btnEn.classList.add('active');
+  } else if (lang === 'pt' && btnPt) {
+    btnPt.classList.add('active');
   }
 }
 
-// Ao carregar a página, verifica se já existe uma língua salva ou usa Português por padrão
-window.onload = () => {
-  const savedLang = localStorage.getItem('preferredLang') || 'pt';
-  setLanguage(savedLang);
-};
-
+// Inicialização única e segura
 document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem('preferredLang') || "en";
+  const savedLang = localStorage.getItem('preferredLang') || "pt";
   setLanguage(savedLang);
 });
