@@ -95,14 +95,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  width: 45px;  /* Tamanho fixo para garantir que seja redondo/quadrado */
+  width: 45px;
   height: 45px;
+  padding: 0;
+  overflow: hidden; /* Garante que nada saia para fora do botão */
   border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0; /* Remove padding interno que possa deslocar a bandeira */
 }
 
 .language-switch button .flag-icon {
